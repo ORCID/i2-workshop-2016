@@ -198,21 +198,12 @@ _ACTIVITY_
   <td valign="top"><p>Authorization header    w/Bearer prefix</p></td>
 </tr>
 <tr>
-<<<<<<< HEAD
-  <td valign="top"><p><strong>OAuth Client ID</strong></p></td>
-  <td valign="top"><p>Your Member API client ID (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
-</tr>
-<tr>
-  <td valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-  <td valign="top"><p>Your Member API client secret (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
-=======
   <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
   <td valign="top"><p>Your Member API client ID (ex: APP-E422WM33OPZWKKMQ)</p></td>
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
   <td valign="top"><p>Your Member API client secret (ex: ae857cfb-446b-4c3f-8a09-55436bf602dc)</p></td>
->>>>>>> master
 </tr>
 </table></li>
 <li>The configuration screen should look similar to the image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
