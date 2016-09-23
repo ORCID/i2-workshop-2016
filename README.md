@@ -239,7 +239,7 @@ _ACTIVITY_
 
 [//]: # (---------THE CROSS-LINK BREAKDOWN---------)
 <a name="5-cross-link-breakdown"></a>
-#THE CROSS-LINK BREAKDOWN (15 min)
+#5. THE CROSS-LINK BREAKDOWN (15 min)
 _PRESENTATION_
 
 **TO BE WRITTEN**: _As described in the agenda: Breakdown of the functionality that we are about setup. Suggest this be a power point slide that shows the flow._
@@ -247,7 +247,7 @@ _PRESENTATION_
 
 [//]: # (---------API CREDENTIAL SETUP---------)
 <a name="6-api-credentials"></a>
-#API CREDENTIAL SETUP (30 min)
+#6. API CREDENTIAL SETUP (30 min)
 _ACTIVITY_
 
 **TO BE WRITTEN**: _As described in the agenda: Set up ORCID Member API credentials to enable IdP cross linking. We will try it out, using Google OAuth playground to simulate the IdP website._
@@ -258,7 +258,7 @@ Originally I had thought that we'd have an interface for requesting credentials,
 
 [//]: # (---------THE USER EXPERIENCE---------)
 <a name="7-user-experience"></a>
-#THE USER EXPERIENCE (30 min)
+#7. THE USER EXPERIENCE (30 min)
 _ACTIVITY_
 
 **TO BE WRITTEN**: _As described in the agenda: The technical connection is only part of the overall solution. What should you display to users when they authorize your system to connect with their ORCID records? What you should tell them if they deny your request? Using an ORCID template as a starting point, workshop participants will work together to craft messages and customize templates that will resonate with their audiences._
@@ -275,7 +275,7 @@ Suggestions for discussion topics
 
 [//]: # (---------POST AN AFFILIATION TO YOUR UNIVERSITY---------)
 <a name="8-post-affiliation"></a>
-#POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
+#8. POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
 _ACTIVITY_
 
 **TO BE UPDATED**: _Update this text to be specific to posting a university affiliation as part of the IdP Cross Link. From the agenda: Format data about the person’s relationship to your institution and post it to his/her ORCID record. Update the data that you’ve already posted to simulate updating data when an affiliation relationship changes._
@@ -365,7 +365,7 @@ _ACTIVITY_
 
 [//]: # (---------REFERENCE MATERIALS---------)
 <a name="9-reference"></a>
-#REFERENCE MATERIALS
+#9. REFERENCE MATERIALS
 
 <ul>
 <li>See example implementations and workflow guides <a href="https://members.orcid.org" target="_blank">https://members.orcid.org</a><br />&nbsp;</li>
