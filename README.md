@@ -163,19 +163,19 @@ _PRESENTATION_
 #4. OAUTH BASICS (30 min)
 _ACTIVITY_
 
-<p>As discussed in section  3.1, the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously added. To do these actions, one must obtain permission from the user/data subject. This section describes the standard OAuth process for requesting this permission.</p>
+<p>As discussed in [section 3.1](#3.1), the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously added. To do these actions, one must obtain permission from the user/data subject. This section describes the standard OAuth process for requesting this permission.</p>
 <h2><a name="4.1"></a>4.1  Accessing the Sandbox Member API</h2>
-<p>Client credentials consisting of a client ID and a client secret are needed in order to access the Member API. Client Credentials for the Member APIs are issued by ORCID. For this workshop, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Sandbox Client Credentials using the request form at <a href="https://orcid.org/content/register-client-application" target="_blank">https://orcid.org/content/register-client-application</a></p>
+<p>Client credentials consisting of a client ID and a client secret are needed in order to access the Member API. Client Credentials for the Member APIs are issued by ORCID. For this workshop, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Member API Sandbox Client Credentials using the request form at <a href="https://orcid.org/content/register-client-application" target="_blank">https://orcid.org/content/register-client-application</a> for experimintation and testing that you do outside of this workshop.</p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h2><a name="5.2"></a>5.2 Setting up the OAuth Playground</h2>
-<p>We&rsquo;ll continue to use the  Google Developers&rsquo; OAuth Playground for the next exercises, but a few configuration  changes are needed in order to work with the Member API.</p>
+
+<h2><a name="4.2"></a>4.2 Setting up the OAuth Playground</h2>
+<p>We&rsquo;ll use the Google Developers&rsquo; OAuth Playground for the next exercises. To get started, we will need to configure the environment to work with the ORCID Member API.</p>
 <ol>
 <li>Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; </li>
-<li>Click the gear icon in the upper right corner to open  the configuration form.<br />&nbsp; </li>
-<p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="" width="530" height="60" border="0" /></p>
-<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
+<li>Click the gear icon in the upper right corner to open the configuration form.<br />&nbsp; </li>
+<p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="Screen shot: Top of the screen at the Google OAuth plaground site, showing the gear icon in the upper right corner at https://developers.google.com/oauthplayground" width="530" height="60" border="0" /></p>
+<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
 <li>Enter the following:
- <p><em>(Fields edited to work with the Member  API are highlighted; the rest remain the same.)</em></p>
 <table border="1" cellspacing="0" cellpadding="0">
 <tr>
   <td width="158" valign="top"><p><strong>OAuth flow</strong></p></td>
@@ -191,7 +191,7 @@ _ACTIVITY_
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>Token endpoint</strong></p></td>
-  <td valign="top"><p><strong>https://qa.orcid.org/oauth/token</strong></p></td>
+  <td valign="top"><p>https://qa.orcid.org/oauth/token</p></td>
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>Access token location</strong></p></td>
@@ -199,36 +199,34 @@ _ACTIVITY_
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
-  <td valign="top"><p><strong>Your Member API client ID</strong> (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
+  <td valign="top"><p>Your Member API client ID (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-  <td valign="top"><p><strong>Your Member API client secret</strong> (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
+  <td valign="top"><p>Your Member API client secret (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
 </tr>
-</table><br  />&nbsp;</li>
-<li>The configuration screen should look similar to the  image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
+</table></li>
+<li>The configuration screen should look similar to the image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
 </ol>
-<br clear="all" />
+<div clear="all" />
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h1><a name="6"></a>6. Member  API: Getting permission to edit ORCID records </h1>
-<h2><a name="6.1"></a>6.1  Obtaining Access Tokens</h2>
-<p>To access an ORCID record  via the Member API, you first need to get permission from the owner of the  record in the form of an Access Token.</p>
-<p> This process of granting  permission uses OAuth and is similar to the process used for obtaining an  authenticated ORCID iD described in <a href="#4">section 4</a>. </p>
+
+<h2><a name="4.3"></a>4.3  Getting permission (an Access Token) to access ORCID records</h2>
+<p>To access an ORCID record via the Member API, you first need to get permission from the owner of the record in the form of an Access Token. ORCID uses the standard protocol, OAuth 2.0, to obtain this permission. Generally there are two steps: </p>
 <ol>
-<li>Get an <strong>Authorization  Code</strong>.<br />&nbsp; </li>
-<li>Exchange the Authorization Code for an <strong>Access Token</strong>.<br />&nbsp; </li>
+<li>Get an <strong>Authorization Code</strong>.<br />&nbsp; </li>
+<li>Exchange the Authorization Code for an <strong>Access Token</strong>.<br />&nbsp;</li>
 </ol>
-<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h3><img src="http://alainna.org/orcid/clip_image033.jpg" alt="" width="288" height="177" align="right" hspace="12" vspace="12" /><a name="h.uzsp2l9oif0z" id="h.uzsp2l9oif0z"></a>6.1.1 Get an Authorization Code</h3>
-<p>To get an Authorization  Code, you&rsquo;ll need to prompt the user to log into his/her ORCID account and  grant permission to your application. In a real-world situation, this is done  using an authorization URL that you construct. With the OAuth Playground, however,  this step is done by configuring some additional settings and clicking a  button.</p>
+<h3><img src="http://alainna.org/orcid/clip_image033.jpg" alt="Screen shot: Google OAuth Playground, Step 1 - adding the scope variable, and clicking the 'Authorize API' button." width="288" height="177" align="right" hspace="12" vspace="12" /><a name="h.uzsp2l9oif0z" id="h.uzsp2l9oif0z"></a>4.3.1 Get an Authorization Code</h3>
+<p>To get an Authorization  Code, you&rsquo;ll need to prompt the user to sign into his/her ORCID account and  grant permission to your application. In a real-world situation, this is done  using an authorization URL that you construct. With the OAuth Playground, however, this step is done by configuring some additional settings and clicking a button.</p>
 <ol>
-<li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong> on the left side of the screen, type <strong>/activities/update</strong> in the text box (do  not select any of the options in the box above).<br />&nbsp; </li>
-<li>Click <strong>Authorize  APIs</strong>.<br />&nbsp; </li>
-<li><img src="http://alainna.org/orcid/clip_image035.gif" alt="" width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear. Click <strong>Sign In</strong> and sign into your Sandbox account.<br />&nbsp; </li>
-<li>Click <strong>Authorize </strong>on  the ORCID OAuth login screen and you will be sent back to the OAuth Playground.  A 6-character code will appear in the <strong>Authorization  Code </strong>field.<br />&nbsp; </li>
+<li>Beneath <strong>Step 1: Select &amp; authorize APIs</strong> on the left side of the Google OAuth Playground screen, type <strong>/activities/update</strong> in the text box (do not select any of the options presented in the box above).<br />&nbsp;</li>
+<li>Click the <strong>Authorize APIs</strong> button.<br />&nbsp; </li>
+<li><img src="http://alainna.org/orcid/clip_image035.gif" alt="Screen shot: Google OAuth Playground, Step 2 - exchanging the authorization code for tokens - the code is pre-filled after the previous step." width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth permission screen will appear. If you are already signed into your test Sandbox account, click the <strong>Authorize</strong> button to grant permission. If you are not yet signed in, type in your test account sign in credentials, and click <strong>Sign In</strong> and sign into your Sandbox account and grant the permissions.<br />&nbsp; </li>
+<li>Click <strong>Authorize</strong> on the ORCID OAuth login screen and you will be sent back to the OAuth Playground. A 6-character code will appear in the <strong>Authorization Code </strong>field.<br />&nbsp; </li>
 </ol>
-<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h3><a name="6.1.2"></a>6.1.2  Exchange the Authorization Code for an Access Token</h3>
+
+<h3><a name="4.3.2"></a>4.3.2  Exchange the Authorization Code for an Access Token</h3>
 <p>Once you have an  Authorization Code, you can exchange it for an Access Token, which allows you  to read from/write to a user&rsquo;s ORCID record. In a real-world situation, this  exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. With the OAuth Playground, however, this step is  done by clicking a button.</p>
 <ol>
 <li><img src="http://alainna.org/orcid/clip_image036.gif" alt="" width="336" height="111" align="right" hspace="12" vspace="12" />Beneath the <strong>Authorization Code</strong> field, click <strong>Exchange authorization code for tokens</strong>. <br />&nbsp; </li>
