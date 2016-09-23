@@ -254,6 +254,28 @@ _ACTIVITY_
 
 Originally I had thought that we'd have an interface for requesting credentials, setting up the pemissions one wants along with the redirect URI. I was then thinking that we could have them set up the redirect URI to execute the OAuth statements using their credentials, and then displaying the ORCID iD obtained on the page. i.e., they would have put in their credentials, and the pre-set code would display the ORCID iD. We just show them the token statement that converts the code into the ORCID iD. It would be great to have an alternate suggestion on how to handle this based on what we can do right now.
 
+Before you can use ORCID's Member API, need to create an API client which will give you login credentials for your application: a Client ID (consumer KEY) and Client Secret (consumer SECRET). Your application will use these credentials as it interacts with the ORCID API.
+
+Anyone can use the Member API in ORCID's Developer Sandbox to test the API. This requires <a href="https://orcid.org/organizations/integrators/create-client-application" target="_blank">registering a client application</a> for ORCID to process. The process is not automatic, and requires that ORCID staff issue you credentials individually. 
+
+We will provide you API credentials for the sandbox server for this workshop, but here is what you would need under normal circumstances: 
+
+<strong>Fields to make sure we know who you are</strong>
+* <strong>Notes for ORCID Staff</strong>: let us know if you're using a <a href="https://members.orcid.org/orcid-enabled-systems">vendor system</a>, need additional redirect URIs, or have any other questions or notes.
+* <strong>Name of your organization</strong> 
+* <strong>Contact email address</strong> to which we will send the credentials; for members, we will use it to contact you about bugs and important API notifications and updates
+
+<strong>Fields displayed to users</strong>
+* <strong>Name of your client application</strong>: The name that is displayed on authorization screen and list of trusted organizations in users' records 
+* <strong>Short description of your client application</strong>: Displayed on authorization screen when users click the question mark icon
+* <strong>URL of the home page of your application</strong>: Displayed on list of trusted organizations
+
+<strong>Fields to ensure the correct interactions for your API</strong>
+* <strong>Redirect URIs</strong>: URL(s) in your web application where users should be returned to after they authorize access to their ORCID record data.
+* <strong>Type of credentials</strong>: Basic allows you to read from/write to records, while premium allows read/write access and also lets you register register webhooks
+
+
+
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------THE USER EXPERIENCE---------)
