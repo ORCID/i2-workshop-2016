@@ -198,12 +198,21 @@ _ACTIVITY_
   <td valign="top"><p>Authorization header    w/Bearer prefix</p></td>
 </tr>
 <tr>
+<<<<<<< HEAD
   <td valign="top"><p><strong>OAuth Client ID</strong></p></td>
   <td valign="top"><p>Your Member API client ID (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
 </tr>
 <tr>
   <td valign="top"><p><strong>OAuth Client Secret</strong></p></td>
   <td valign="top"><p>Your Member API client secret (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
+=======
+  <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
+  <td valign="top"><p>Your Member API client ID (ex: APP-E422WM33OPZWKKMQ)</p></td>
+</tr>
+<tr>
+  <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
+  <td valign="top"><p>Your Member API client secret (ex: ae857cfb-446b-4c3f-8a09-55436bf602dc)</p></td>
+>>>>>>> master
 </tr>
 </table></li>
 <li>The configuration screen should look similar to the image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
@@ -262,7 +271,7 @@ _ACTIVITY_
 
 **TO BE WRITTEN**: _As described in the agenda: Set up ORCID Member API credentials to enable IdP cross linking. We will try it out, using Google OAuth playground to simulate the IdP website._
 
-Originally I had thought that we'd have an interface for requesting credentials, setting up the pemissions one wants along with the redirect URI. I was then thinking that we could have them set up the redirect URI to execute the OAuth statements using their credentials, and then displaying the ORCID iD obtained on the page. i.e., they would have put in their credentials, and the pre-set code would display the ORCID iD. We just show them the token statement that converts the code into the ORCID iD. It woudl be great to have an alternate suggestion on how to handle this based on what we can do right now.
+Originally I had thought that we'd have an interface for requesting credentials, setting up the pemissions one wants along with the redirect URI. I was then thinking that we could have them set up the redirect URI to execute the OAuth statements using their credentials, and then displaying the ORCID iD obtained on the page. i.e., they would have put in their credentials, and the pre-set code would display the ORCID iD. We just show them the token statement that converts the code into the ORCID iD. It would be great to have an alternate suggestion on how to handle this based on what we can do right now.
 
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
@@ -298,28 +307,30 @@ Suggestions:
 
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
-<h2><a name="7.1"></a>7.1 Adding a New Work to an ORCID Record</h2>
+<h2><a name="8.1"></a>8.1 Post an affiliation to your ORCID record</h2>
 <ol>
-<li>Beneath <strong>Step 3:  Configure request to API</strong>, set <strong>HTTP  Method </strong>to <strong>POST</strong>.<br />&nbsp; </li>
-<li>Click <strong>Add  headers</strong> and enter the following values:</li>
+<li>Beneath <strong>Step 3: Configure request to API</strong>, set <strong>HTTP Method </strong>to <strong>POST</strong>.<br />&nbsp; </li>
+<li>Click <strong>Add headers</strong> and enter the following values:</li>
 <ul>
   <li><strong>Header name:</strong> accept</li>
   <li><strong>Header value:</strong> application/vnd.orcid+xml<br />
   </li>
 </ul>
 <p><img src="http://alainna.org/orcid/clip_image040.jpg" alt="" width="464" height="119" border="0" /></p>
-<li>Click <strong>Add</strong> to  add another header and enter the following values:</li>
+<li>Click <strong>Add</strong> to add another header and enter the following values:</li>
 <ul>
   <li><strong>Header name:</strong> Content-type</li>
   <li><strong>Header value:</strong> application/vnd.orcid+xml<br />&nbsp; </li>
 </ul>
 <li>Click <strong>Add</strong> again, then click <strong>Close</strong>.<br />&nbsp; </li>
-<li>In the <strong>Request  URI</strong> field, enter https://api.qa.orcid.org/v1.2/[orcid-id]/orcid-works,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.qa.orcid.org/v1.2/0000-0002-3791-8427/orcid-works)<br />
+<li>In the <strong>Request  URI</strong> field, enter https://api.sandbox.orcid.org/v1.2/[orcid-id]/affiliation,  replacing [orcid-id] with the ORCID iD of the Sandbox record that you created earlier  (ex: https://api.sandbox.orcid.org/v1.2/0000-0002-3791-8427/affiliation)<br />
   <br />
   <img src="http://alainna.org/orcid/clip_image042.jpg" alt="" width="392" height="232" border="0" /><br />&nbsp; </li>
-<li>Click <strong>Enter  request body</strong>. Here is where you&rsquo;ll enter the XML for the works you wish to  add.<br />&nbsp; </li>
-<li>Visit <a href="http://git.io/vITI9" target="_blank">http://git.io/vITI9</a> and copy the XML in the <strong>Sample Work </strong>section.<br />&nbsp; </li>
-<li>Paste the copied content into the <strong>Request Body </strong>text box and click <strong>Close</strong>.<br />
+<li>Click <strong>Enter request body</strong>. Here is where you&rsquo;ll enter the XML for the works you wish to  add.<br />&nbsp; </li>
+<li>Visit <a href="https://git.io/vibkI" target="_blank">https://git.io/vibkI</a> and copy the XML in the <strong>Sample Affiliation</strong> section.<br />&nbsp; </li>
+<li>Paste the copied content into the <strong>Request Body </strong>text box</li>
+<li>Edit the text to reflect your institution. For the disambiguated-organization-identifier, replace XXXXXX with the Ringgold identifier for your institution listed <strong>Ringgold List</strong></li>
+<li>Click <strong>Close</strong>.<br />
   <br />
   <img src="http://alainna.org/orcid/clip_image044.jpg" alt="" width="498" height="275" border="0" /></li><Br />&nbsp;
 <li>Click <strong>Send the  request</strong>.<br />&nbsp; </li>
@@ -328,35 +339,14 @@ Suggestions:
 <li> Visit the <strong>public  view </strong>of your Sandbox record at http://sandbox.orcid.org/[Your sandbox iD]  to see the work that you added in the user interface.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h2><a name="7.2"></a>7.2 Updating  a Work</h2>
-<p>In the last section, we  asked the user for permission to add a new work to their ORCID record using the  /activities/update scope. To edit that same work, we need to request  permission using the /orcid-works/update scope. </p>
-<p> In a real-world situation,  create and update permissions can be requested in the same step, resulting in  an Access Token that can be used to both add and edit works. When using the  OAuth Playground, however, we can only request permission for one scope at a  time, so we&rsquo;ll need to generate a new Access Token in order to edit the work  that we just added.</p>
+<h2><a name="8.2"></a>8.2 Updating an affiliation</h2>
+<p>In a real-world situation, you may need to update a researcher's affiliation -- when they finish a degree, change departments, or finish a contract. You'll </p>
 <ol>
-<li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong>, type <strong>/orcid-works/update</strong> in the text box.<br />&nbsp; </li>
-<li>Click <strong>Authorize  APIs</strong>.<br />&nbsp; </li>
-<li>An ORCID OAuth login screen will appear. Click <strong>Sign In</strong>, and sign into your Sandbox  account.<br />&nbsp; </li>
-<li>Click <strong>Authorize </strong>on  the ORCID OAuth login screen and you will be sent back to the OAuth Playground.  A 6-character code will appear in the <strong>Authorization  Code </strong>field.<br />&nbsp; 
-</li>
-<li>Beneath the Authorization Code field, click <strong>Exchange authorization code for tokens</strong>.<br />&nbsp; </li>
-<li>The token will appear in the <strong>Access Token </strong>field.<br />&nbsp; </li>
-<li>Beneath <strong>Step 3:  Configure request to API</strong>, set <strong>HTTP  Method </strong>to <strong>PUT</strong>.<br />&nbsp; </li>
-<li>Click <strong>Add  headers</strong> and enter the following values:</li>
-<ul>
-  <li><strong>Header name:</strong> Accept</li>
-  <li><strong>Header value:</strong> application/vnd.orcid+xml<br />&nbsp; </li>
-</ul>
-<li>Click <strong>Add</strong> to  add another header and enter the following values:</li>
-<ul>
-  <li><strong>Header name:</strong> Content-type</li>
-  <li><strong>Header value:</strong> application/vnd.orcid+xml<br />&nbsp; </li>
-</ul>
-<li>Click <strong>Add</strong> again, then click <strong>Close</strong>.<br />&nbsp; </li>
-<li>In  the <strong>Request URI </strong>field, enter  https://api.qa.orcid.org/v1.2/[orcid-id]/orcid-works, replacing [orcid-id]  with the ORCID iD of your Sandbox record (ex:  https://api.qa.orcid.org/v1.2/0000-0002-1223-3173/orcid-works). <br />&nbsp; 
-</li>
 <li>Click <strong>Enter request body</strong>. This is where you&rsquo;ll  enter the XML for the work that you wish to edit.<br />&nbsp; </li>
-<li>Visit <a href="http://git.io/vITI9" target="_blank">http://git.io/vITI9</a> and copy the XML in the <strong>Sample Work  Updated </strong>section.<br />&nbsp; 
+<li>Visit <a href="http://git.io/vITI9" target="_blank">http://git.io/vITI9</a> and copy the XML in the <strong>Sample Affiliation Updated </strong>section. <b>(Tip: The amended area are lines 14-18, beginning with &lt;end-date&gt;. You can paste it after the &lt;/start-date&gt; in the active Request Body.)</b><br />&nbsp; 
 </li>
-<li>Paste  the copied content into the <strong>Request Body</strong> field and click <strong>Close</strong>.<br />&nbsp; 
+<li>Paste the copied content into the <strong>Request Body</strong> field and amend to reflect your institution.</li>
+<li>Click <strong>Close</strong>.<br />&nbsp; 
 </li>
 <li>Click <strong>Send the Request</strong>.<br />&nbsp; 
 </li>
