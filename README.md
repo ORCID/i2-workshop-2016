@@ -174,35 +174,35 @@ _ACTIVITY_
 <li>Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; </li>
 <li>Click the gear icon in the upper right corner to open the configuration form.<br />&nbsp; </li>
 <p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="Screen shot: Top of the screen at the Google OAuth plaground site, showing the gear icon in the upper right corner at https://developers.google.com/oauthplayground" width="530" height="60" border="0" /></p>
-<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
 <li>Enter the following:
 <table border="1" cellspacing="0" cellpadding="0">
 <tr>
   <td width="158" valign="top"><p><strong>OAuth flow</strong></p></td>
   <td valign="top"><p>Server-side</p></td>
+  <td width="275" rowspan="7"><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" /></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>OAuth endpoints</strong></p></td>
+  <td valign="top"><p><strong>OAuth endpoints</strong></p></td>
   <td valign="top"><p>Custom</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>Authorization endpoint</strong></p></td>
+  <td valign="top"><p><strong>Authorization endpoint</strong></p></td>
   <td valign="top"><p>https://qa.orcid.org/oauth/authorize</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>Token endpoint</strong></p></td>
+  <td valign="top"><p><strong>Token endpoint</strong></p></td>
   <td valign="top"><p>https://qa.orcid.org/oauth/token</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>Access token location</strong></p></td>
+  <td valign="top"><p><strong>Access token location</strong></p></td>
   <td valign="top"><p>Authorization header    w/Bearer prefix</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
+  <td valign="top"><p><strong>OAuth Client ID</strong></p></td>
   <td valign="top"><p>Your Member API client ID (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
+  <td valign="top"><p><strong>OAuth Client Secret</strong></p></td>
   <td valign="top"><p>Your Member API client secret (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
 </tr>
 </table></li>
