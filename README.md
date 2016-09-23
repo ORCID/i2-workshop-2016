@@ -99,21 +99,21 @@ _PRESENTATION_
 <tr>
   <td width="95" valign="top"><br />
     <strong>API Version</strong></td>
-  <td width="172" valign="top"><p><strong>Access</strong></p></td>
-  <td width="413" valign="top"><p><strong>Features</strong></p></td>
+  <td width="200" valign="top"><p><strong>Access</strong></p></td>
+  <td width="385" valign="top"><p><strong>Features</strong></p></td>
 </tr>
 <tr>
   <td width="95" valign="top"><p>Public API</p></td>
-  <td width="172" valign="top"><p>Freely available to anyone</p></td>
-  <td width="413" valign="top"><p><strong>Authenticate:</strong> Obtain a user&rsquo;s authenticated ORCID iD<br />
+  <td width="200" valign="top"><p>Freely available to anyone</p></td>
+  <td width="385" valign="top"><p><strong>Authenticate:</strong> Obtain a user&rsquo;s authenticated ORCID iD<br />
     <strong>Read (Public)</strong>:<strong> </strong>Search/retrieve public data<br />
     <strong>Create:</strong> Create new ORCID records on demand</p>
 </td>
 </tr>
 <tr>
   <td width="95" valign="top"><p>Member API</p></td>
-  <td width="172" valign="top"><p>Available to organizations that support ORCID with an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
-  <td width="413" valign="top"><p><strong>Read (Limited)</strong>: Search/retrieve limited-access data<br />
+  <td width="200" valign="top"><p>Available to organizations that support ORCID with an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
+  <td width="385" valign="top"><p><strong>Read (Limited)</strong>: Search/retrieve limited-access data<br />
     <strong>Add</strong>: Post new items to a record (affiliations, works, etc.)<br />
     <strong>Update</strong>: Edit or delete items you previously added</p></td>
 </tr>
@@ -174,27 +174,27 @@ _ACTIVITY_
 <li>Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; </li>
 <li>Click the gear icon in the upper right corner to open the configuration form.<br />&nbsp; </li>
 <p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="Screen shot: Top of the screen at the Google OAuth plaground site, showing the gear icon in the upper right corner at https://developers.google.com/oauthplayground" width="530" height="60" border="0" /></p>
-<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
 <li>Enter the following:
 <table border="1" cellspacing="0" cellpadding="0">
 <tr>
   <td width="158" valign="top"><p><strong>OAuth flow</strong></p></td>
   <td valign="top"><p>Server-side</p></td>
+  <td width="275" rowspan="7"><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" /></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>OAuth endpoints</strong></p></td>
+  <td valign="top"><p><strong>OAuth endpoints</strong></p></td>
   <td valign="top"><p>Custom</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>Authorization endpoint</strong></p></td>
+  <td valign="top"><p><strong>Authorization endpoint</strong></p></td>
   <td valign="top"><p>https://qa.orcid.org/oauth/authorize</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>Token endpoint</strong></p></td>
+  <td valign="top"><p><strong>Token endpoint</strong></p></td>
   <td valign="top"><p>https://qa.orcid.org/oauth/token</p></td>
 </tr>
 <tr>
-  <td width="158" valign="top"><p><strong>Access token location</strong></p></td>
+  <td valign="top"><p><strong>Access token location</strong></p></td>
   <td valign="top"><p>Authorization header    w/Bearer prefix</p></td>
 </tr>
 <tr>
@@ -243,6 +243,16 @@ _ACTIVITY_
 _PRESENTATION_
 
 **TO BE WRITTEN**: _As described in the agenda: Breakdown of the functionality that we are about setup. Suggest this be a power point slide that shows the flow._
+
+The basic steps for crosslinking are:
+
+1. The user creates an ORCID iD and links to the IdP (as we did in earlier in the workshop)
+2. ORCID kicks off the OAuth permission based on information that the IdP has provided _(see the next section for this information)_
+3. The user grants permission to the IdP (as we did earlier in the workshop)
+4. The IdP processes the permission and provides feedback to the user, in the form of a webpage.
+5. The IdP redirects the user back to the ORCID my-orcid page where (s)he started.
+
+
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------API CREDENTIAL SETUP---------)
