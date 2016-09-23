@@ -236,6 +236,10 @@ _ACTIVITY_
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
+</ol>
+<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
+
+[//]: # (---------ABOUT THE ORCID APIs---------)
 
 [//]: # (---------THE CROSS-LINK BREAKDOWN---------)
 <a name="5-cross-link-breakdown"></a>
@@ -258,11 +262,47 @@ The basic steps for crosslinking are:
 [//]: # (---------API CREDENTIAL SETUP---------)
 <a name="6-api-credentials"></a>
 #6. API CREDENTIAL SETUP (30 min)
-_ACTIVITY_
 
-**TO BE WRITTEN**: _As described in the agenda: Set up ORCID Member API credentials to enable IdP cross linking. We will try it out, using Google OAuth playground to simulate the IdP website._
+To get started setting up the institutional signin in cross-link process described in the previous section, you'll need to:
 
-Originally I had thought that we'd have an interface for requesting credentials, setting up the pemissions one wants along with the redirect URI. I was then thinking that we could have them set up the redirect URI to execute the OAuth statements using their credentials, and then displaying the ORCID iD obtained on the page. i.e., they would have put in their credentials, and the pre-set code would display the ORCID iD. We just show them the token statement that converts the code into the ORCID iD. It would be great to have an alternate suggestion on how to handle this based on what we can do right now.
+**1. Get ORCID Member API credentials** (Not a member? You can use the [ORCID Public API](https://members.orcid.org/api/introduction-orcid-public-api) to get users' ORCID iDs, but you won't be able to update their ORCID records)
+
+**2. Configure identity provider settings for your API credentials**
+
+##Get ORCID Member API Credentials
+
+To use the ORCID Member API, you'll need credentials consisting of a Client ID (consumer KEY) and Client Secret (consumer SECRET). These work like a username and password that allow your application to access the API.
+
+We require that all new Member API applications be built and tested using our [Developer Sandbox](https://sandbox.orcid.org/signin), which mirrors production environment behavior, but does not contain production data. [Learn more about the Developer Sandbox](http://support.orcid.org/knowledgebase/articles/166623-is-the-sandbox-different-from-the-production-regis)
+
+To get Sandbox API credentials, use the form at: 
+
+**[Request ORCID API credentials](https://orcid.org/content/register-client-application-0)**
+
+_Note: The process is not automated - ORCID staff will usually issue your credentials within 24 hours_
+
+When requesting credentials, you'll be asked for the following information:
+
+* <strong>Notes for ORCID Staff</strong>: let us know if you're using a <a href="https://members.orcid.org/orcid-enabled-systems">vendor system</a>, need additional redirect URIs, or have any other questions or notes.
+* <strong>Name of your organization</strong> 
+* <strong>Contact email address</strong> Use a valid email - we'll send your credentials to this address!
+* <strong>Name of your client application</strong>: Name displayed on authorization screen and list of trusted organizations in users' records 
+* <strong>Short description of your client application</strong>: Displayed on authorization screen when users click the question mark icon
+* <strong>URL of the home page of your application</strong>: Displayed on the list of trusted organizations in users' records 
+* <strong>Redirect URIs</strong>: URL(s) in your web application where users should be returned to after they authorize access to their ORCID record data.
+* <strong>Type of credentials</strong>: Basic allows you to read from/write to records, while premium allows read/write access and also lets you register register webhooks
+
+##Configure identity provider settings for your API credentials
+At the moment, the process for adding identify provider settings to your API credentials is not automated. 
+
+Instead, please send a request to [support@orcid.org](mailto:support@orcid.org) with the following information:
+
+- Client Id
+- Your identity provider entity ID (looks similar to https://idp.example.org/idp/shibboleth)
+- Redirect URL the page on your site that users should be directed to after they complete the cross link process (this can be a different redirect URL than you use for other ORCID API applications)
+
+_For new API credential requests, you can also include this info in the notes section of the request form.__
+
 
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
