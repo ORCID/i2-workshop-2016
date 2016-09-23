@@ -99,21 +99,21 @@ _PRESENTATION_
 <tr>
   <td width="95" valign="top"><br />
     <strong>API Version</strong></td>
-  <td width="172" valign="top"><p><strong>Access</strong></p></td>
-  <td width="413" valign="top"><p><strong>Features</strong></p></td>
+  <td width="200" valign="top"><p><strong>Access</strong></p></td>
+  <td width="385" valign="top"><p><strong>Features</strong></p></td>
 </tr>
 <tr>
   <td width="95" valign="top"><p>Public API</p></td>
-  <td width="172" valign="top"><p>Freely available to anyone</p></td>
-  <td width="413" valign="top"><p><strong>Authenticate:</strong> Obtain a user&rsquo;s authenticated ORCID iD<br />
+  <td width="200" valign="top"><p>Freely available to anyone</p></td>
+  <td width="385" valign="top"><p><strong>Authenticate:</strong> Obtain a user&rsquo;s authenticated ORCID iD<br />
     <strong>Read (Public)</strong>:<strong> </strong>Search/retrieve public data<br />
     <strong>Create:</strong> Create new ORCID records on demand</p>
 </td>
 </tr>
 <tr>
   <td width="95" valign="top"><p>Member API</p></td>
-  <td width="172" valign="top"><p>Available to organizations that support ORCID with an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
-  <td width="413" valign="top"><p><strong>Read (Limited)</strong>: Search/retrieve limited-access data<br />
+  <td width="200" valign="top"><p>Available to organizations that support ORCID with an annual membership subscription<br /><i>Sandbox Member API freely available to all for testing</i></p></td>
+  <td width="385" valign="top"><p><strong>Read (Limited)</strong>: Search/retrieve limited-access data<br />
     <strong>Add</strong>: Post new items to a record (affiliations, works, etc.)<br />
     <strong>Update</strong>: Edit or delete items you previously added</p></td>
 </tr>
