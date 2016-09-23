@@ -313,9 +313,13 @@ _ACTIVITY_
 
 So far, we've spent most of this tutorial focused on technical aspects of building an ORCID integration. The technical nuts and bolts are important, but the user experience is just as critical in a successful integration. 
 
-In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so.
+In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so, including:
 
-##Redirect pages
+- [Redirect pages](redirect-pages)
+- [Local support resources](local-support-resources)
+- [Communication](communication)
+
+##Redirect pages<a id="redirect-pages"></a>
 While much of the cross-link interaction takes place on the ORCID site, there are (minimally) 2 pages that you'll need to create on your own site:
 
 1. Redirect page - user authorized the connection (this is the page URL that you provide in your API credential registration)
@@ -341,7 +345,7 @@ It's important to include messaging and graphics on these pages that help users 
 - Link to resources about how your institution uses ORCID
 - [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
-##Local support resources
+##Local support resourcesa <a id="local-support-resources"></a>
 ORCID's support team can help your users with general ORCID questions and issues, but for help related to your institution's ORCID integration you'll need to create some resources of your own that users can turn to, like:
 
 - Knowledgebase articles
@@ -356,7 +360,7 @@ In addition, you should provide users with a local support contact for ORCID-rel
 - [Texas A & M LibGuide](http://tamu.libguides.com/c.php?g=555554&p=3819597)
 - [University of Michigan LibGuide](http://guides.lib.umich.edu/c.php?g=283255&p=1886827)
 
-##Communications
+##Communications<a id="communications"></a>
 - Plan a communication timeline - make sure that users are aware of your ORCID project and plans well before you launch!
 - Get high-level buy-in; Send communications from dean/provost level channels if possible
 - Promote your ORCID project at libraries, faculty/staff/TA trainings and orientations, campus events, etc
