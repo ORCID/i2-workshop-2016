@@ -315,14 +315,15 @@ So far, we've spent most of this tutorial focused on technical aspects of buildi
 
 In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so.
 
+##Redirect pages
 While much of the cross-link interaction takes place on the ORCID site, there are (minimally) 2 pages that you'll need to create on your own site:
 
-1. Redirect page - user authorized the connection
+1. Redirect page - user authorized the connection (this is the page URL that you provide in your API credential registration)
 2. Redirect page - user denied permission
 
 It's important to include messaging and graphics on these pages that help users understand what's happening, and to provide them with resources in case they have questions or run into trouble.
 
-##Redirect page - user authorized the connection
+###Redirect page - user authorized the connection
 - Confirmation message (optionally, customized with the user's name/ORCID iD)
 - Link/button back to ORCID (use https://orcid.org/my-orcid to send the user to the logged-in view)
 - Contact at your instituion for help/questions about ORCID
@@ -330,17 +331,50 @@ It's important to include messaging and graphics on these pages that help users 
 - Contact for ORCID Support (support@orcid.org)
 - Link to information about ORCID (http://orcid.org/about)
 - Link to ORCID user knowledgebase(http://support.orcid.org/knowledgebase/topics/32827-website-user) 
+- [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
-##Redirect page - user denied permission
+###Redirect page - user denied permission
 - Message describing what happened (user can log into ORCID with their institutional account, but your institution doesn't know their ORCID iD and can't update their record)
 - Message listing the benefits of connecting an ORCID iD to your institution
 - Button/Link to complete the authorization
 - Contact at your instituion for help/questions about ORCID
 - Link to resources about how your institution uses ORCID
+- [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
-##Graphics/branding
+##Local support resources
+ORCID's support team can help your users with general ORCID questions and issues, but for help related to your institution's ORCID integration you'll need to create some resources of your own that users can turn to, like:
+
+- Knowledgebase articles
+- LibGuides
+- Tutorials
+- Videos
+
+In addition, you should provide users with a local support contact for ORCID-related questions.
+
+###Example resources
+- [HKBU tutorial video](https://www.youtube.com/watch?v=Zd5r0PflZE4&feature=youtu.be)
+- [Texas A & M LibGuide](http://tamu.libguides.com/c.php?g=555554&p=3819597)
+- [University of Michigan LibGuide](http://guides.lib.umich.edu/c.php?g=283255&p=1886827)
+
+##Communications
+- Plan a communication timeline - make sure that users are aware of your ORCID project and plans well before you launch!
+- Get high-level buy-in; Send communications from dean/provost level channels if possible
+- Promote your ORCID project at libraries, faculty/staff/TA trainings and orientations, campus events, etc
+- Make it an ongoing effort - ensure that new faculty/staff/TAs are in the loop
+
+###Outreach resources
+We're here to help! Find logos, fliers, videos, presentation, and other downloadable templates that you use to help get the word out about ORCID at:
+[ORCID Outreach Resources](https://members.orcid.org/outreach-resources)
 
 
+##Activity: Build your own redirect pages!
+Starting from the samples provided, create your own custom redirect pages.
+
+1. Download [sample-redirect-pages.zip](sample-redirect-pages.zip) to your computer
+2. Unzip the file
+3. Open redirect-success.html and redirect-deny.html in a browser to view their current content
+3. Using a text editor, edit redirect-success.html and redirect-deny.html to customize the messages, links, graphics, etc (make sure to keep the files inside the sample-redirect-pages folder, so that the style sheets remain linked!)
+4. Save your changes and refresh the pages in your browser to see the results
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------POST AN AFFILIATION TO YOUR UNIVERSITY---------)
