@@ -333,11 +333,11 @@ So far, we've spent most of this tutorial focused on technical aspects of buildi
 
 In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so, including:
 
-- [Redirect pages](redirect-pages)
-- [Local support resources](local-support-resources)
-- [Communication](communication)
+1. [Redirect pages](redirect-pages)
+2. [Local support resources](local-support-resources)
+3. [Communication](communication)
 
-##Redirect pages<a id="redirect-pages"></a>
+##7.1 Redirect pages<a id="redirect-pages"></a>
 While much of the cross-link interaction takes place on the ORCID site, there are (minimally) 2 pages that you'll need to create on your own site:
 
 1. Redirect page - user authorized the connection (this is the page URL that you provide in your API credential registration)
@@ -345,7 +345,7 @@ While much of the cross-link interaction takes place on the ORCID site, there ar
 
 It's important to include messaging and graphics on these pages that help users understand what's happening, and to provide them with resources in case they have questions or run into trouble.
 
-###Redirect page - user authorized the connection
+###7.1.1 Redirect page - user authorized the connection
 - Confirmation message (optionally, customized with the user's name/ORCID iD)
 - Link/button back to ORCID (use https://orcid.org/my-orcid to send the user to the logged-in view)
 - Contact at your instituion for help/questions about ORCID
@@ -355,7 +355,7 @@ It's important to include messaging and graphics on these pages that help users 
 - Link to ORCID user knowledgebase(http://support.orcid.org/knowledgebase/topics/32827-website-user) 
 - [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
-###Redirect page - user denied permission
+###7.1.2 Redirect page - user denied permission
 - Message describing what happened (user can log into ORCID with their institutional account, but your institution doesn't know their ORCID iD and can't update their record)
 - Message listing the benefits of connecting an ORCID iD to your institution
 - Button/Link to complete the authorization
@@ -363,7 +363,7 @@ It's important to include messaging and graphics on these pages that help users 
 - Link to resources about how your institution uses ORCID
 - [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
-##Local support resourcesa <a id="local-support-resources"></a>
+##7.2 Local support resources <a id="local-support-resources"></a>
 ORCID's support team can help your users with general ORCID questions and issues, but for help related to your institution's ORCID integration you'll need to create some resources of your own that users can turn to, like:
 
 - Knowledgebase articles
@@ -373,23 +373,23 @@ ORCID's support team can help your users with general ORCID questions and issues
 
 In addition, you should provide users with a local support contact for ORCID-related questions.
 
-###Example resources
+###7.2.1 Example resources
 - [HKBU tutorial video](https://www.youtube.com/watch?v=Zd5r0PflZE4&feature=youtu.be)
 - [Texas A & M LibGuide](http://tamu.libguides.com/c.php?g=555554&p=3819597)
 - [University of Michigan LibGuide](http://guides.lib.umich.edu/c.php?g=283255&p=1886827)
 
-##Communications<a id="communications"></a>
+##7.3 Communications<a id="communications"></a>
 - Plan a communication timeline - make sure that users are aware of your ORCID project and plans well before you launch!
 - Get high-level buy-in; Send communications from dean/provost level channels if possible
 - Promote your ORCID project at libraries, faculty/staff/TA trainings and orientations, campus events, etc
 - Make it an ongoing effort - ensure that new faculty/staff/TAs are in the loop
 
-###Outreach resources
+###7.3.1 Outreach resources
 We're here to help! Find logos, fliers, videos, presentation, and other downloadable templates that you use to help get the word out about ORCID at:
 [ORCID Outreach Resources](https://members.orcid.org/outreach-resources)
 
 
-##Activity: Build your own redirect pages!
+##7.4 Activity: Build your own redirect pages!
 Starting from the samples provided, create your own custom redirect pages.
 
 1. Download [sample-redirect-pages.zip](sample-redirect-pages.zip) to your computer
