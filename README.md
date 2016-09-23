@@ -301,7 +301,7 @@ Instead, please send a request to [support@orcid.org](mailto:support@orcid.org) 
 - Your identity provider entity ID (looks similar to https://idp.example.org/idp/shibboleth)
 - Redirect URL the page on your site that users should be directed to after they complete the cross link process (this can be a different redirect URL than you use for other ORCID API applications)
 
-_For new API credential requests, you can also include this info in the notes section of the request form.__
+_For new API credential requests, you can also include this info in the notes section of the request form._
 
 
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
@@ -311,15 +311,35 @@ _For new API credential requests, you can also include this info in the notes se
 #7. THE USER EXPERIENCE (30 min)
 _ACTIVITY_
 
-**TO BE WRITTEN**: _As described in the agenda: The technical connection is only part of the overall solution. What should you display to users when they authorize your system to connect with their ORCID records? What you should tell them if they deny your request? Using an ORCID template as a starting point, workshop participants will work together to craft messages and customize templates that will resonate with their audiences._
+So far, we've spent most of this tutorial focused on technical aspects of building an ORCID integration. The technical nuts and bolts are important, but the user experience is just as critical in a successful integration. 
 
-Originally I envisioned we'd take what was done in the step above, and have them edit HTML pages to fill in the text of a simple accept and a simple deny display page (i.e., they just write the body text - keeping these as stand-alone files that they could edit themselves and upload so that they could see the result when going through the IdP round trip flow. the emphasis would be on the content of the page, not the technology.)
+In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so.
 
-Suggestions for discussion topics
-* Demo application
-* Discussion about the two screens that they would write - when granted and denied permission - what should they say. 
-* Imagry
-* Inclusion of a link back to the registry...
+While much of the cross-link interaction takes place on the ORCID site, there are (minimally) 2 pages that you'll need to create on your own site:
+
+1. Redirect page - user authorized the connection
+2. Redirect page - user denied permission
+
+It's important to include messaging and graphics on these pages that help users understand what's happening, and to provide them with resources in case they have questions or run into trouble.
+
+##Redirect page - user authorized the connection
+- Confirmation message (optionally, customized with the user's name/ORCID iD)
+- Link/button back to ORCID (use https://orcid.org/my-orcid to send the user to the logged-in view)
+- Contact at your instituion for help/questions about ORCID
+- Link to resources about how your institution uses ORCID
+- Contact for ORCID Support (support@orcid.org)
+- Link to information about ORCID (http://orcid.org/about)
+- Link to ORCID user knowledgebase(http://support.orcid.org/knowledgebase/topics/32827-website-user) 
+
+##Redirect page - user denied permission
+- Message describing what happened (user can log into ORCID with their institutional account, but your institution doesn't know their ORCID iD and can't update their record)
+- Message listing the benefits of connecting an ORCID iD to your institution
+- Button/Link to complete the authorization
+- Contact at your instituion for help/questions about ORCID
+- Link to resources about how your institution uses ORCID
+
+##Graphics/branding
+
 
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
