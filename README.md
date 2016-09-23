@@ -262,11 +262,11 @@ The basic steps for crosslinking are:
 [//]: # (---------API CREDENTIAL SETUP---------)
 <a name="6-api-credentials"></a>
 #6. API CREDENTIAL SETUP (30 min)
-_ACTIVITY_
 
 To get started setting up the institutional signin in cross-link process described in the previous section, you'll need to:
 
 **1. Get ORCID Member API credentials** (Not a member? You can use the [ORCID Public API](https://members.orcid.org/api/introduction-orcid-public-api) to get users' ORCID iDs, but you won't be able to update their ORCID records)
+
 **2. Configure identity provider settings for your API credentials**
 
 ##Get ORCID Member API Credentials
@@ -279,7 +279,7 @@ To get Sandbox API credentials, use the form at:
 
 **[Request ORCID API credentials](https://orcid.org/content/register-client-application-0)**
 
-__Note: The process is not automated - ORCID staff will usually issue your credentials within 24 hours_
+_Note: The process is not automated - ORCID staff will usually issue your credentials within 24 hours_
 
 When requesting credentials, you'll be asked for the following information:
 
@@ -301,7 +301,7 @@ Instead, please send a request to [support@orcid.org](mailto:support@orcid.org) 
 - Your identity provider entity ID (looks similar to https://idp.example.org/idp/shibboleth)
 - Redirect URL the page on your site that users should be directed to after they complete the cross link process (this can be a different redirect URL than you use for other ORCID API applications)
 
-For new API credential requests, you can also include this info in the notes section of the request form.
+_For new API credential requests, you can also include this info in the notes section of the request form.__
 
 
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
