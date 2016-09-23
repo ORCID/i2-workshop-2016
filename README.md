@@ -71,14 +71,14 @@ _ACTIVITY_
 <ol>
   <li>Using the interface, add a sentence or two to serve as the biography for your test record. The biography section is located at the top of the right column, and the edit button is the pencil icon in the upper right corner of this section, next to the visibility selector.<br />&nbsp;</li>
   <li>In the <strong>Employment</strong> section, click <strong>Add employment</strong> > <strong>Add manually</strong> to add employment information.<br />&nbsp;</li>
-  <li>After saving your employment information, notice the information on the bottom of the "card" you just created. There is a Source field (that matches your name because you added this information) and the date that you created this addition to your record. This provenance information is recorded for all infomration added to an ORCID record.<br />&nbsp;</li>
+  <li>After saving your employment information, notice the information on the bottom of the "card" you just created. There is a Source field (that matches your name because you added this information) and the date that you created this addition to your record. This provenance information is recorded for all information added to an ORCID record.<br />&nbsp;</li>
   <li>In the main menu at the top of the screen, click on the <strong>Account settings</strong> link to display your account preferences. Notice each section to see what iD holders can control with their ORCID accounts.<br />&nbsp;</li>
   <li>In the main menu at the top of the screen, click on the <strong>Developer tools</strong> link. In this section a user may obtain credentials to access the public API. Note that this API is different from the member API that we will be discussing today.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 <h2><a name="2.3"></a>2.3 Connect your new iD with your IdP</h2>
-<p>Since there are over 2.5 million ORCID iDs, many people already have an ORCID iD when they link to their IdP. To experience this proces, we will sign out of your test record and start from the prospective of someone who has an iD, and notices that they can sign in with IdP credentials.</p>
+<p>Since there are over 2.5 million ORCID iDs, many people already have an ORCID iD when they link to their IdP. To experience this process, we will sign out of your test record and start from the prospective of someone who has an iD, and notices that they can sign in with IdP credentials.</p>
 <ol>
   <li>Sign out of the ORCID record you just created by clicking the <strong>Sign out</strong> button in the upper right corner. <em>Alternatively, you can navigate to the URL: <a href="https://sandbox.orcid.org/signout" target="_blank">https://sandbox.orcid.org/signout</a>.</em><br />&nbsp;</li>
   <li>On the Sign in page (<a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/signin</a>), choose <strong>Sign in using your Institutional Account</strong> to see the list of supported eduGAIN institutions.<br />&nbsp;</li>
@@ -251,7 +251,7 @@ Endpoint: https://sandbox.orcid.org/oauth/token"
 <ol>
 <li>Beneath the <strong>Authorization Code</strong> field, click <strong>Exchange authorization code for tokens</strong>. <br />&nbsp; </li>
 <li>The token will appear in the <strong>Access Token </strong>field.<br />&nbsp; </li>
-<li><img src="http://alainna.org/orcid/clip_image038.jpg" alt="Screen shot: the request/reponse section on the right side of the screen displays access token details." width="288" align="right" border="0" />Note that you are provided with additional information  in the <strong>Request/Response </strong>section on  the right side of the screen, such as the name and ORCID iD of the user who granted permission, the lifespan of the token (20 years), and the scope for  which the token is valid.<br />&nbsp; <br />&nbsp; </li>
+<li><img src="http://alainna.org/orcid/clip_image038.jpg" alt="Screen shot: the request/response section on the right side of the screen displays access token details." width="288" align="right" border="0" />Note that you are provided with additional information in the <strong>Request/Response </strong>section on the right side of the screen, such as the name and ORCID iD of the user who granted permission, the lifespan of the token (20 years), and the scope for  which the token is valid.<br />&nbsp; <br />&nbsp; </li>
 </ol>
 <div clear="all" />
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
@@ -307,7 +307,7 @@ When requesting credentials, you'll be asked for the following information:
 * <strong>Type of credentials</strong>: Basic allows you to read from/write to records, while premium allows read/write access and also lets you register webhooks
 
 ##6.2 Configure identity provider settings for your API credentials
-At the moment, the process for adding itentity provider settings to your API credentials is not automated. 
+At the moment, the process for adding identity provider settings to your API credentials is not automated. 
 
 Instead, please send a request to [support@orcid.org](mailto:support@orcid.org) with the following information:
 
@@ -348,7 +348,7 @@ It's important to include messaging and graphics on these pages that help users 
 ###7.1.1 Redirect page - user authorized the connection
 - Confirmation message (optionally, customized with the user's name/ORCID iD)
 - Link/button back to ORCID (use https://orcid.org/my-orcid to send the user to the logged-in view)
-- Contact at your instituion for help/questions about ORCID
+- Contact at your institution for help/questions about ORCID
 - Link to resources about how your institution uses ORCID
 - Contact for ORCID Support (support@orcid.org)
 - Link to information about ORCID (http://orcid.org/about)
@@ -359,7 +359,7 @@ It's important to include messaging and graphics on these pages that help users 
 - Message describing what happened (user can log into ORCID with their institutional account, but your institution doesn't know their ORCID iD and can't update their record)
 - Message listing the benefits of connecting an ORCID iD to your institution
 - Button/Link to complete the authorization
-- Contact at your instituion for help/questions about ORCID
+- Contact at your institution for help/questions about ORCID
 - Link to resources about how your institution uses ORCID
 - [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
@@ -404,7 +404,7 @@ Starting from the samples provided, create your own custom redirect pages.
 #8. POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
 _ACTIVITY_
 
-In this section we will try to add and update an affiliation to your Sanbox test ORCID record using the permission that you have already received from earlier exercises.
+In this section we will try to add and update an affiliation to your Sandbox test ORCID record using the permission that you have already received from earlier exercises.
 
 <h2><a name="8.1"></a>8.1 Post an affiliation to your ORCID record</h2>
 <ol>
