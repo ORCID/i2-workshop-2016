@@ -54,6 +54,24 @@ _PRESENTATION_
 _ACTIVITY_
 
 **TO BE WRITTEN**: _Set up an ORCID iD in our test environment, and explore signing in with your IdP. Understand ORCID’s provenance model and its implications. Learn about the components of an ORCID record, how they get populated, and how they get used._
+
+<h2><img width="194" height="336" src="http://alainna.org/orcid/clip_image002.gif" align="right" hspace="12" vspace="12" alt="Screen Shot 2015-06-04 at 4.43.26 PM.png" /><a name="2.1"></a>2.1 Create an ORCID iD</h2>
+<p>In order to try out API calls, such as a reading a record and adding information to it, you will also  need to create a test ORCID record. This can be done through the  user interface, much like in the live ORCID registry.</p>
+<ol>
+  <li>Open a web browser and navigate to <a href="https://qa.orcid.org/signin" target="_blank">https://qa.orcid.org/signin</a><br />&nbsp;</li>
+  <li>Click <strong>Register  for an ORCID iD</strong>.<br />&nbsp;</li>
+  <li>Complete the form with a name, email, and password.</li>
+<p><strong><em>IMPORTANT! </em></strong><em>Don&rsquo;t use a real email address! Instead, make up an address  ending in @mailinator.com (use any prefix, e.g. sgarcia@mailinator.com).</em></p>
+  <li>Click the <strong>I consent…</strong> checkbox and click <strong>Register</strong>.<br />&nbsp;</li>
+  <li>After completing the registration process, you will be  taken to your new testing ORCID record. Make note of the 16-digit ORCID iD for  this record – you will need this in order to make API calls later during the workshop.<br />
+    <img src="http://alainna.org/orcid/clip_image004.jpg" alt="" width="645" height="107" border="0" /><br />&nbsp;</li>
+  <li>Add a few pieces of information to your new record – biography, education, employment, etc. – so that you have some data to  work with in future steps.</li>
+</ol>
+
+<h2><a name="2.2"></a>2.2 Connect your new iD with your IdP</h2>
+<p>text</p>
+
+
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------ABOUT THE ORCID APIs---------)
