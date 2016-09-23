@@ -12,37 +12,37 @@ _In February 2016, ORCID enabled IdP SSO for all eduGAIN member institutions, al
 [//]: # (---------AGENDA---------)
 <a name="top"></a>
 ##Workshop Agenda (4 hrs)
-###[PRESENTATION](#1-what-is-orcid): WHAT IS ORCID? (30 min)
+###[1. PRESENTATION](#1-what-is-orcid): WHAT IS ORCID? (30 min)
 Learn about ORCID and ORCID iDs and how they work. Understand how organizations are using the ORCID registry to collect and display ORCID iDs, and connect and sync information between ORCID records and their own system.
 
-###[ACTIVITY](#2-explore-registry): EXPLORE THE ORCID REGISTRY (20 min)
+###[2. ACTIVITY](#2-explore-registry): EXPLORE THE ORCID REGISTRY (20 min)
 Set up an ORCID iD in our test environment, and explore signing in with your IdP. Understand ORCID’s provenance model and its implications. Learn about the components of an ORCID record, how they get populated, and how they get used.
 
-###[PRESENTATION](#3-about-orcid-apis): ABOUT THE ORCID APIs (30 min)
+###[3. PRESENTATION](#3-about-orcid-apis): ABOUT THE ORCID APIs (30 min)
 Discover ORCID API types and features, and understand ORCID’s test environment and the technologies that ORCID uses.
 
-###[ACTIVITY](#4-oauth-basics): OAUTH BASICS (30 min)
+###[4. ACTIVITY](#4-oauth-basics): OAUTH BASICS (30 min)
 ORCID’s API uses OAuth 2.0 as its protocol for a system client to obtain user permission to access the information stored in his/her ORCID record. In this section you will obtain system client credentials, and execute basic commands to request permission using a basic OAuth 2.0 3-legged flow. (Don’t know what that is? don’t worry! It will be covered in the session.)
 
-###[PRESENTATION](#5-cross-link-breakdown): THE CROSS-LINK BREAKDOWN (15 min)
+###[5. PRESENTATION](#5-cross-link-breakdown): THE CROSS-LINK BREAKDOWN (15 min)
 Breakdown of the functionality that we are about setup.
 
-###[ACTIVITY](#6-api-credentials): API CREDENTIAL SETUP (30 min)
+###[6. ACTIVITY](#6-api-credentials): API CREDENTIAL SETUP (30 min)
 Set up ORCID Member API credentials to enable IdP cross linking. We will try it out, using Google OAuth playground to simulate the IdP website.
 
-###[ACTIVITY](#7-user-experience): THE USER EXPERIENCE (30 min)
+###[7. ACTIVITY](#7-user-experience): THE USER EXPERIENCE (30 min)
 The technical connection is only part of the overall solution. What should you display to users when they authorize your system to connect with their ORCID records? What you should tell them if they deny your request? Using an ORCID template as a starting point, workshop participants will work together to craft messages and customize templates that will resonate with their audiences.
 
-###[ACTIVITY](#8-post-affiliation): POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
+###[8. ACTIVITY](#8-post-affiliation): POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
 Format data about the person’s relationship to your institution and post it to his/her ORCID record. Update the data that you’ve already posted to simulate updating data when an affiliation relationship changes.
 
-###[REFERENCE MATERIALS](#9-reference)
+###[9. REFERENCE MATERIALS](#9-reference)
 
 --
 
 [//]: # (---------WHAT IS ORCID?---------)
 <a name="1-what-is-orcid"></a>
-#WHAT IS ORCID? (30 min) 
+#1. WHAT IS ORCID? (30 min) 
 _PRESENTATION_ 
 
 [Presented as a power point presentation](https://www.dropbox.com/s/t96571yrgygjzuu/20160925_TechExWorkshop-Paglione.pptx?dl=0)
@@ -50,36 +50,50 @@ _PRESENTATION_
 
 [//]: # (---------EXPLORE THE ORCID REGISTRY---------)
 <a name="2-explore-registry"></a>
-#EXPLORE THE ORCID REGISTRY (20 min)
+#2. EXPLORE THE ORCID REGISTRY (20 min)
 _ACTIVITY_
 
-**TO BE WRITTEN**: _Set up an ORCID iD in our test environment, and explore signing in with your IdP. Understand ORCID’s provenance model and its implications. Learn about the components of an ORCID record, how they get populated, and how they get used._
-
-<h2><img width="194" height="336" src="http://alainna.org/orcid/clip_image002.gif" align="right" hspace="12" vspace="12" alt="Screen Shot 2015-06-04 at 4.43.26 PM.png" /><a name="2.1"></a>2.1 Create an ORCID iD</h2>
+<h2><img width="194" height="336" src="http://alainna.org/orcid/clip_image002.gif" align="right" hspace="12" vspace="12" alt="Screen Shot: ORCID registration screen at https://sandbox.orcid.org/register" /><a name="2.1"></a>2.1 Create an ORCID iD</h2>
 <p>In order to try out API calls, such as a reading a record and adding information to it, you will also  need to create a test ORCID record. This can be done through the  user interface, much like in the live ORCID registry.</p>
 <ol>
-  <li>Open a web browser and navigate to <a href="https://qa.orcid.org/signin" target="_blank">https://qa.orcid.org/signin</a><br />&nbsp;</li>
-  <li>Click <strong>Register  for an ORCID iD</strong>.<br />&nbsp;</li>
-  <li>Complete the form with a name, email, and password.</li>
+  <li>Open a web browser and navigate to <a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/signin</a><br />&nbsp;</li>
+  <li>Click <strong>Register for an ORCID iD</strong>.<br />&nbsp;</li>
+  <li>Complete the form with a name, email, and password. You will need to remember this information for future steps.</li>
 <p><strong><em>IMPORTANT! </em></strong><em>Don&rsquo;t use a real email address! Instead, make up an address  ending in @mailinator.com (use any prefix, e.g. sgarcia@mailinator.com).</em></p>
   <li>Click the <strong>I consent…</strong> checkbox and click <strong>Register</strong>.<br />&nbsp;</li>
-  <li>After completing the registration process, you will be  taken to your new testing ORCID record. Make note of the 16-digit ORCID iD for  this record – you will need this in order to make API calls later during the workshop.<br />
-    <img src="http://alainna.org/orcid/clip_image004.jpg" alt="" width="645" height="107" border="0" /><br />&nbsp;</li>
-  <li>Add a few pieces of information to your new record – biography, education, employment, etc. – so that you have some data to  work with in future steps.</li>
+  <li>After completing the registration process, you will be  taken to your new testing ORCID record. Make note of the 16-digit ORCID iD for this record – you will need this in order to make API calls later during the workshop.<br />
+    <img src="http://alainna.org/orcid/clip_image004.jpg" alt="Screen Shot: Top section of the my-orcid page, showing the ORCID iD in the left column under the name at https://sandbox.orcid.org/my-orcid" width="645" height="107" border="0" /><br />&nbsp;</li>
 </ol>
+<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
-<h2><a name="2.2"></a>2.2 Connect your new iD with your IdP</h2>
-<p>text</p>
+<h2><a name="2.2"></a>2.2 Explore the ORCID record</h2>
+<p>In this section we will learn about the parts of an ORCID record, and explore ORCID's provenance model.</p>
+<ol>
+  <li>Using the interface, add a sentence or two to serve as the biography for your test record. The biography section is located at the top of the right column, and the edit button is the pencil icon in the upper right corner of this section, next to the visibility selector.<br />&nbsp;</li>
+  <li>In the <strong>Employment</strong> section, click <strong>Add employment</strong> > <strong>Add manually</strong> to add employment information.<br />&nbsp;</li>
+  <li>After saving your employment information, notice the information on the bottom of the "card" you just created. There is a Source field (that matches your name because you added this information) and the date that you created this addition to your record. This provenance information is recorded for all infomration added to an ORCID record.<br />&nbsp;</li>
+  <li>In the main menu at the top of the screen, click on the <strong>Account settings</strong> link to display your account preferences. Notice each section to see what iD holders can control with their ORCID accounts.<br />&nbsp;</li>
+  <li>In the main menu at the top of the screen, click on the <strong>Developer tools</strong> link. In this section a user may obtain credentials to access the public API. Note that this API is different from the member API that we will be discussing today.</li>
+</ol>
+<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
-
+<h2><a name="2.3"></a>2.3 Connect your new iD with your IdP</h2>
+<p>Since there are over 2.5 million ORCID iDs, many people already have an ORCID iD when they link to their IdP. To experience this proces, we will sign out of your test record and start from the prospective of someone who has an iD, and notices that they can sign in with IdP credentials.</p>
+<ol>
+  <li>Sign out of the ORCID record you just created by clicking the <strong>Sign out</strong> button in the upper right corner. <em>Alternatively, you can navigate to the URL: <a href="https://sandbox.orcid.org/signout" target="_blank">https://sandbox.orcid.org/signout</a>.</em><br />&nbsp;</li>
+  <li>On the Sign in page (<a href="https://sandbox.orcid.org/signin" target="_blank">https://sandbox.orcid.org/signin</a>), choose <strong>Sign in using your Institutional Account</strong> to see the list of supported eduGAIN institutions.<br />&nbsp;</li>
+  <li>Enter your organization's name in the box, or choose to pick it from the list. If you do not have credentials at an eduGAIN-included institution, you may use <strong>United ID</strong> for this example. <em>(you will need 2-factor authentication to use United ID.)</em><br />&nbsp;</li>
+  <li>After signing into your institution, you will be asked to finish linking the accounts by providing your ORICD sign in credentials. Type in the email address / ORCID iD and Password that you created in the previous step. Click <strong>Sign into ORCID</strong> to finish linking your accounts.<br />&nbsp;</li>
+  <li>On the my-orcid page that appears, notice an orange alert box confirming that the accounts are linked, and suggesting that you connect to the university's account. This is an example, of the cross linking that we will be exploring further today. We will ignore this message for now.</li>
+</ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------ABOUT THE ORCID APIs---------)
 <a name="3-about-orcid-apis"></a>
-#ABOUT THE ORCID APIs (30 min)
+#3. ABOUT THE ORCID APIs (30 min)
 _PRESENTATION_
 
-<h2><a name="1.1"></a>1.1 ORCID API types &amp; features</h2>
+<h2><a name="3.1"></a>3.1 ORCID API types &amp; features</h2>
 <p>ORCID offers several APIs (Application Programming Interfaces) that allow your systems to connect to the  ORCID registry, including reading from and writing to ORCID records. Some API  functions are freely available to anyone; others are available to organizations  that financially support ORCID with an annual membership subscription.</p>
 <table border="1" cellspacing="0" cellpadding="0" width="680">
 <tr>
@@ -105,7 +119,7 @@ _PRESENTATION_
 </tr>
 </table>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h2><a name="1.2"></a>1.2 Sandbox test environment</h2>
+<h2><a name="3.2"></a>3.2 Sandbox test environment</h2>
 <p>In addition to the  production Registry and APIs, ORCID also offers a testing environment, the ORCID Sandbox, which we will be using for this boot camp. The Sandbox is open  to all users and provides a place to develop and test applications without affecting data in the live ORCID registry.</p>
 <p> The Sandbox includes:</p>
 <ul>
@@ -120,7 +134,7 @@ _PRESENTATION_
 <li>Links in the top menu bar (For Researchers, For  Organizations, About, etc.) do not function.</li>
 </ul>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h2><a name="1.3"></a>1.3 ORCID  API technologies</h2>
+<h2><a name="3.3"></a>3.3 ORCID  API technologies</h2>
 <p>All of the ORCID APIs are  based on the same set of technologies:</p>
 <ol>
 <li><strong>REST: </strong>ORCID APIs are &ldquo;RESTful&rdquo;, which  means that they use HTTP (hyper-text transfer) calls to transfer information.<br />&nbsp;</li>
@@ -128,7 +142,7 @@ _PRESENTATION_
 <li><strong>XML/JSON:</strong> ORCID APIs support data exchange in either XML or JSON format.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h2><a name="1.4"></a>1.4 ORCID  API Tools</h2>
+<h2><a name="3.4"></a>3.4 ORCID  API Tools</h2>
 <p>In order to use the ORCID  APIs you will need the following software tools:</p>
 <ol>
 <li>Web browser: Firefox (33+), Chrome (38+), Internet Explorer (10+), Safari (6+)<br />&nbsp;</li>
@@ -141,29 +155,27 @@ _PRESENTATION_
   <li>Your own web application, in a language such as Java,  Ruby, Python, PHP, etc.</li>
 </ul>
 </ol>
-<p>For this boot camp, we will  be using the online tool <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a>.</p>
+<p>For this workshop, we will  be using the online tool <a href="https://developers.google.com/oauthplayground/">Google OAuth Playground</a>.</p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------OAUTH BASICS---------)
 <a name="4-oauth-basics"></a>
-#OAUTH BASICS (30 min)
+#4. OAUTH BASICS (30 min)
 _ACTIVITY_
 
-<h1><a name="5"></a>5. Member  API: Access to Amend ORCID Records</h1>
-<p>As discussed in section  1.1, the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously  added.</p>
-<h2><a name="5.1"></a>5.1  Accessing the Sandbox Member API</h2>
-<p>As with the Public API,  client credentials consisting of a client ID and a client secret are needed in  order to access the Member API. Public API credentials cannot be used to access  the Member API, so we&rsquo;ll be using a different client ID and secret for the  remainder of this boot camp.</p>
-<p>Client Credentials for the  Member APIs are issued by ORCID. For this boot camp, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Sandbox Client Credentials using the request form at <a href="https://orcid.org/content/register-client-application" target="_blank">https://orcid.org/content/register-client-application</a></p>
+<p>As discussed in [section 3.1](#3.1), the Public API can only be used to read and search ORCID records, and to  get authenticated ORCID iDs. The Member API, however, can be used to add new  information to ORCID records, as well as to update information previously added. To do these actions, one must obtain permission from the user/data subject. This section describes the standard OAuth process for requesting this permission.</p>
+<h2><a name="4.1"></a>4.1  Accessing the Sandbox Member API</h2>
+<p>Client credentials consisting of a client ID and a client secret are needed in order to access the Member API. Client Credentials for the Member APIs are issued by ORCID. For this workshop, you can use the sample Sandbox Client Credentials, but we recommend that you obtain your own Member API Sandbox Client Credentials using the request form at <a href="https://orcid.org/content/register-client-application" target="_blank">https://orcid.org/content/register-client-application</a> for experimintation and testing that you do outside of this workshop.</p>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h2><a name="5.2"></a>5.2 Setting up the OAuth Playground</h2>
-<p>We&rsquo;ll continue to use the  Google Developers&rsquo; OAuth Playground for the next exercises, but a few configuration  changes are needed in order to work with the Member API.</p>
+
+<h2><a name="4.2"></a>4.2 Setting up the OAuth Playground</h2>
+<p>We&rsquo;ll use the Google Developers&rsquo; OAuth Playground for the next exercises. To get started, we will need to configure the environment to work with the ORCID Member API.</p>
 <ol>
 <li>Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; </li>
-<li>Click the gear icon in the upper right corner to open  the configuration form.<br />&nbsp; </li>
-<p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="" width="530" height="60" border="0" /></p>
-<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
+<li>Click the gear icon in the upper right corner to open the configuration form.<br />&nbsp; </li>
+<p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="Screen shot: Top of the screen at the Google OAuth plaground site, showing the gear icon in the upper right corner at https://developers.google.com/oauthplayground" width="530" height="60" border="0" /></p>
+<p><img src="http://alainna.org/orcid/clip_image031.jpg" alt="Screen shot: The Google OAuth plaground configuration form expanded at https://developers.google.com/oauthplayground" width="275" height="291" align="right" hspace="12" vspace="12" /></p>
 <li>Enter the following:
- <p><em>(Fields edited to work with the Member  API are highlighted; the rest remain the same.)</em></p>
 <table border="1" cellspacing="0" cellpadding="0">
 <tr>
   <td width="158" valign="top"><p><strong>OAuth flow</strong></p></td>
@@ -179,7 +191,7 @@ _ACTIVITY_
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>Token endpoint</strong></p></td>
-  <td valign="top"><p><strong>https://qa.orcid.org/oauth/token</strong></p></td>
+  <td valign="top"><p>https://qa.orcid.org/oauth/token</p></td>
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>Access token location</strong></p></td>
@@ -187,36 +199,34 @@ _ACTIVITY_
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>OAuth Client ID</strong></p></td>
-  <td valign="top"><p><strong>Your Member API client ID</strong> (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
+  <td valign="top"><p>Your Member API client ID (ex: APP-VZTMFLZVBD5NSJQA)</p></td>
 </tr>
 <tr>
   <td width="158" valign="top"><p><strong>OAuth Client Secret</strong></p></td>
-  <td valign="top"><p><strong>Your Member API client secret</strong> (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
+  <td valign="top"><p>Your Member API client secret (ex: 448101b3-1618-4841-8c4f-b04ab9edac92)</p></td>
 </tr>
-</table><br  />&nbsp;</li>
-<li>The configuration screen should look similar to the  image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
+</table></li>
+<li>The configuration screen should look similar to the image at right. After you&rsquo;ve entered the settings, click <strong>Close</strong> in the lower left corner of the configuration screen.</li>
 </ol>
-<br clear="all" />
+<div clear="all" />
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h1><a name="6"></a>6. Member  API: Getting permission to edit ORCID records </h1>
-<h2><a name="6.1"></a>6.1  Obtaining Access Tokens</h2>
-<p>To access an ORCID record  via the Member API, you first need to get permission from the owner of the  record in the form of an Access Token.</p>
-<p> This process of granting  permission uses OAuth and is similar to the process used for obtaining an  authenticated ORCID iD described in <a href="#4">section 4</a>. </p>
+
+<h2><a name="4.3"></a>4.3  Getting permission (an Access Token) to access ORCID records</h2>
+<p>To access an ORCID record via the Member API, you first need to get permission from the owner of the record in the form of an Access Token. ORCID uses the standard protocol, OAuth 2.0, to obtain this permission. Generally there are two steps: </p>
 <ol>
-<li>Get an <strong>Authorization  Code</strong>.<br />&nbsp; </li>
-<li>Exchange the Authorization Code for an <strong>Access Token</strong>.<br />&nbsp; </li>
+<li>Get an <strong>Authorization Code</strong>.<br />&nbsp; </li>
+<li>Exchange the Authorization Code for an <strong>Access Token</strong>.<br />&nbsp;</li>
 </ol>
-<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h3><img src="http://alainna.org/orcid/clip_image033.jpg" alt="" width="288" height="177" align="right" hspace="12" vspace="12" /><a name="h.uzsp2l9oif0z" id="h.uzsp2l9oif0z"></a>6.1.1 Get an Authorization Code</h3>
-<p>To get an Authorization  Code, you&rsquo;ll need to prompt the user to log into his/her ORCID account and  grant permission to your application. In a real-world situation, this is done  using an authorization URL that you construct. With the OAuth Playground, however,  this step is done by configuring some additional settings and clicking a  button.</p>
+<h3><img src="http://alainna.org/orcid/clip_image033.jpg" alt="Screen shot: Google OAuth Playground, Step 1 - adding the scope variable, and clicking the 'Authorize API' button." width="288" height="177" align="right" hspace="12" vspace="12" /><a name="h.uzsp2l9oif0z" id="h.uzsp2l9oif0z"></a>4.3.1 Get an Authorization Code</h3>
+<p>To get an Authorization  Code, you&rsquo;ll need to prompt the user to sign into his/her ORCID account and  grant permission to your application. In a real-world situation, this is done  using an authorization URL that you construct. With the OAuth Playground, however, this step is done by configuring some additional settings and clicking a button.</p>
 <ol>
-<li>Beneath <strong>Step 1:  Select &amp; authorize APIs</strong> on the left side of the screen, type <strong>/activities/update</strong> in the text box (do  not select any of the options in the box above).<br />&nbsp; </li>
-<li>Click <strong>Authorize  APIs</strong>.<br />&nbsp; </li>
-<li><img src="http://alainna.org/orcid/clip_image035.gif" alt="" width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth  login screen will appear. Click <strong>Sign In</strong> and sign into your Sandbox account.<br />&nbsp; </li>
-<li>Click <strong>Authorize </strong>on  the ORCID OAuth login screen and you will be sent back to the OAuth Playground.  A 6-character code will appear in the <strong>Authorization  Code </strong>field.<br />&nbsp; </li>
+<li>Beneath <strong>Step 1: Select &amp; authorize APIs</strong> on the left side of the Google OAuth Playground screen, type <strong>/activities/update</strong> in the text box (do not select any of the options presented in the box above).<br />&nbsp;</li>
+<li>Click the <strong>Authorize APIs</strong> button.<br />&nbsp; </li>
+<li><img src="http://alainna.org/orcid/clip_image035.gif" alt="Screen shot: Google OAuth Playground, Step 2 - exchanging the authorization code for tokens - the code is pre-filled after the previous step." width="315" height="136" align="right" hspace="12" vspace="12" />An ORCID OAuth permission screen will appear. If you are already signed into your test Sandbox account, click the <strong>Authorize</strong> button to grant permission. If you are not yet signed in, type in your test account sign in credentials, and click <strong>Sign In</strong> and sign into your Sandbox account and grant the permissions.<br />&nbsp; </li>
+<li>Click <strong>Authorize</strong> on the ORCID OAuth login screen and you will be sent back to the OAuth Playground. A 6-character code will appear in the <strong>Authorization Code </strong>field.<br />&nbsp; </li>
 </ol>
-<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-<h3><a name="6.1.2"></a>6.1.2  Exchange the Authorization Code for an Access Token</h3>
+
+<h3><a name="4.3.2"></a>4.3.2  Exchange the Authorization Code for an Access Token</h3>
 <p>Once you have an  Authorization Code, you can exchange it for an Access Token, which allows you  to read from/write to a user&rsquo;s ORCID record. In a real-world situation, this  exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. With the OAuth Playground, however, this step is  done by clicking a button.</p>
 <ol>
 <li><img src="http://alainna.org/orcid/clip_image036.gif" alt="" width="336" height="111" align="right" hspace="12" vspace="12" />Beneath the <strong>Authorization Code</strong> field, click <strong>Exchange authorization code for tokens</strong>. <br />&nbsp; </li>
@@ -229,7 +239,7 @@ _ACTIVITY_
 
 [//]: # (---------THE CROSS-LINK BREAKDOWN---------)
 <a name="5-cross-link-breakdown"></a>
-#THE CROSS-LINK BREAKDOWN (15 min)
+#5. THE CROSS-LINK BREAKDOWN (15 min)
 _PRESENTATION_
 
 **TO BE WRITTEN**: _As described in the agenda: Breakdown of the functionality that we are about setup. Suggest this be a power point slide that shows the flow._
@@ -237,7 +247,7 @@ _PRESENTATION_
 
 [//]: # (---------API CREDENTIAL SETUP---------)
 <a name="6-api-credentials"></a>
-#API CREDENTIAL SETUP (30 min)
+#6. API CREDENTIAL SETUP (30 min)
 _ACTIVITY_
 
 **TO BE WRITTEN**: _As described in the agenda: Set up ORCID Member API credentials to enable IdP cross linking. We will try it out, using Google OAuth playground to simulate the IdP website._
@@ -248,7 +258,7 @@ Originally I had thought that we'd have an interface for requesting credentials,
 
 [//]: # (---------THE USER EXPERIENCE---------)
 <a name="7-user-experience"></a>
-#THE USER EXPERIENCE (30 min)
+#7. THE USER EXPERIENCE (30 min)
 _ACTIVITY_
 
 **TO BE WRITTEN**: _As described in the agenda: The technical connection is only part of the overall solution. What should you display to users when they authorize your system to connect with their ORCID records? What you should tell them if they deny your request? Using an ORCID template as a starting point, workshop participants will work together to craft messages and customize templates that will resonate with their audiences._
@@ -265,7 +275,7 @@ Suggestions for discussion topics
 
 [//]: # (---------POST AN AFFILIATION TO YOUR UNIVERSITY---------)
 <a name="8-post-affiliation"></a>
-#POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
+#8. POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
 _ACTIVITY_
 
 **TO BE UPDATED**: _Update this text to be specific to posting a university affiliation as part of the IdP Cross Link. From the agenda: Format data about the person’s relationship to your institution and post it to his/her ORCID record. Update the data that you’ve already posted to simulate updating data when an affiliation relationship changes._
@@ -355,7 +365,7 @@ _ACTIVITY_
 
 [//]: # (---------REFERENCE MATERIALS---------)
 <a name="9-reference"></a>
-#REFERENCE MATERIALS
+#9. REFERENCE MATERIALS
 
 <ul>
 <li>See example implementations and workflow guides <a href="https://members.orcid.org" target="_blank">https://members.orcid.org</a><br />&nbsp;</li>
