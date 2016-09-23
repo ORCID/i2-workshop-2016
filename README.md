@@ -243,6 +243,16 @@ _ACTIVITY_
 _PRESENTATION_
 
 **TO BE WRITTEN**: _As described in the agenda: Breakdown of the functionality that we are about setup. Suggest this be a power point slide that shows the flow._
+
+The basic steps for crosslinking are:
+
+1. The user creates an ORCID iD and links to the IdP (as we did in earlier in the workshop)
+2. ORCID kicks off the OAuth permission based on information that the IdP has provided _(see the next section for this information)_
+3. The user grants permission to the IdP (as we did earlier in the workshop)
+4. The IdP processes the permission and provides feedback to the user, in the form of a webpage.
+5. The IdP redirects the user back to the ORCID my-orcid page where (s)he started.
+
+
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------API CREDENTIAL SETUP---------)
