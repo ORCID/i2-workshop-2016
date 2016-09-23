@@ -404,15 +404,7 @@ Starting from the samples provided, create your own custom redirect pages.
 #8. POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
 _ACTIVITY_
 
-**TO BE UPDATED**: _Update this text to be specific to posting a university affiliation as part of the IdP Cross Link. From the agenda: Format data about the person’s relationship to your institution and post it to his/her ORCID record. Update the data that you’ve already posted to simulate updating data when an affiliation relationship changes._
-
-Suggestions:
-* update the XML to include affiliation specific to their own affiliation
-* use the access token to post the XML to their own record
-* Review the record - notice the source - explain the user's ability to create a copy with differences.
-* If time, review updating the post using the same access token.
-
-<p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
+In this section we will try to add and update an affiliation to your Sanbox test ORCID record using the permission that you have already received from earlier exercises.
 
 <h2><a name="8.1"></a>8.1 Post an affiliation to your ORCID record</h2>
 <ol>
@@ -446,6 +438,7 @@ Suggestions:
 <li> Visit the <strong>public  view </strong>of your Sandbox record at http://sandbox.orcid.org/[Your sandbox iD]  to see the work that you added in the user interface.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
+
 <h2><a name="8.2"></a>8.2 Updating an affiliation</h2>
 <p>In a real-world situation, you may need to update a researcher's affiliation -- when they finish a degree, change departments, or finish a contract. You'll </p>
 <ol>
@@ -462,13 +455,6 @@ Suggestions:
 <li>Visit  the public view of your Sandbox record at http://sandbox.orcid.org/[Your  sandbox iD] to see the changes to the work in the user interface.</li>
 </ol>
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
-
-
-[//]: # (---------POST AN AFFILIATION TO YOUR UNIVERSITY---------)
-<a name="8-post-affiliation"></a>
-#POST AN AFFILIATION TO YOUR UNIVERSITY (50 min)
-_ACTIVITY_
-
 
 [//]: # (---------REFERENCE MATERIALS---------)
 <a name="9-reference"></a>
