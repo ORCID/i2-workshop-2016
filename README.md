@@ -174,6 +174,7 @@ As discussed in [section 3.1](#3.1), the Public API can only be used to read and
 <li>Visit <a href="https://developers.google.com/oauthplayground" target="_blank">https://developers.google.com/oauthplayground</a><br />&nbsp; </li>
 <li>Click the gear icon in the upper right corner to open the configuration form.<br />&nbsp; </li>
 <p><img src="http://alainna.org/orcid/clip_image030.jpg" alt="Screen shot: Top of the screen at the Google OAuth playground site, showing the gear icon in the upper right corner at https://developers.google.com/oauthplayground" width="530" height="60" border="0" /></p>
+<p><b>Note: For those with institutional accounts, try to use the credentials <a href="https://gist.github.com/alainna/5358054e156b1b9f7d478b145519433c">for your institution</a>.</b> </p>
 <li>Enter the following:
 <table border="1" cellspacing="0" cellpadding="0">
 <tr>
