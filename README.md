@@ -123,7 +123,7 @@ _PRESENTATION_
 <p>In addition to the  production Registry and APIs, ORCID also offers a testing environment, the ORCID Sandbox, which we will be using for this boot camp. The Sandbox is open  to all users and provides a place to develop and test applications without affecting data in the live ORCID registry.</p>
 <p> The Sandbox includes:</p>
 <ul>
-<li><strong><a href="https://qa.orcid.org/signin" target="_blank">Sandbox Registry</a></strong>: Simulates the ORCID Registry <br />&nbsp;</li>
+<li><strong><a href="https://sandbox.orcid.org/signin" target="_blank">Sandbox Registry</a></strong>: Simulates the ORCID Registry <br />&nbsp;</li>
 <li><strong><a href="https://members.orcid.org/api/introduction-orcid-member-api">Sandbox Member API</a></strong>: Simulates the Member API<br />&nbsp;</li>
 <li><strong><a href="https://members.orcid.org/api/introduction-orcid-public-api">Sandbox Public API</a></strong>: Simulates the Public API</li>
 </ul>
@@ -187,11 +187,11 @@ As discussed in [section 3.1](#3.1), the Public API can only be used to read and
 </tr>
 <tr>
   <td valign="top"><p><strong>Authorization endpoint</strong></p></td>
-  <td valign="top"><p>https://qa.orcid.org/oauth/authorize</p></td>
+  <td valign="top"><p>https://sandbox.orcid.org/oauth/authorize</p></td>
 </tr>
 <tr>
   <td valign="top"><p><strong>Token endpoint</strong></p></td>
-  <td valign="top"><p>https://qa.orcid.org/oauth/token</p></td>
+  <td valign="top"><p>https://sandbox.orcid.org/oauth/token</p></td>
 </tr>
 <tr>
   <td valign="top"><p><strong>Access token location</strong></p></td>
@@ -465,5 +465,5 @@ In this section we will try to add and update an affiliation to your Sandbox tes
 <li>Read technical documentation <a href="https://members.orcid.org/api" target="_blank">https://members.orcid.org/api</a><br />&nbsp;</li>
 <li>Join the ORCID API Users Group <a href="https://groups.google.com/group/orcid-api-users" target="_parent">https://groups.google.com/group/orcid-api-users</a><br />&nbsp;</li>
 <li>Sign up for a Technical Webinar <a href="https://members.orcid.org/event-list">https://members.orcid.org/event-list</a><br />&nbsp;</li>
-<li>Email ORCID Support <a href="mailto:support@orcid.org">support@orcid.org</a></li>
+<li>Email the ORCID Community Engagement & Support <a href="mailto:support@orcid.org">support@orcid.org</a></li>
 </ul>
