@@ -334,7 +334,7 @@ So far, we've spent most of this tutorial focused on technical aspects of buildi
 
 In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so, including:
 
-1. [Redirect pages](sample-redirect-pages)
+1. [Redirect pages](redirect-pages)
 2. [Local support resources](local-support-resources)
 3. [Communication](communication)
 
