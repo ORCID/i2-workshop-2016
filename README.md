@@ -45,7 +45,7 @@ Format data about the person’s relationship to your institution and post it to
 #1. WHAT IS ORCID? (30 min) 
 _PRESENTATION_ 
 
-[Presented as a power point presentation](https://www.dropbox.com/s/t96571yrgygjzuu/20160925_TechExWorkshop-Paglione.pptx?dl=0)
+[Presented as a power point presentation](https://github.com/ORCID/i2-workshop-2016/blob/master/20160925_TechExWorkshop-Paglione.pdf)
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------EXPLORE THE ORCID REGISTRY---------)
