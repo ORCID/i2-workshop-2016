@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<education:education
+	xmlns:common="http://www.orcid.org/ns/common" xmlns:education="http://www.orcid.org/ns/education"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.orcid.org/ns/education ../education-2.0.xsd ">	
+	<education:department-name>Department</education:department-name>
+	<education:role-title>Degree title</education:role-title>
+	<common:start-date>
+		<common:year>2012</common:year>
+		<common:month>01</common:month>
+		<common:day>01</common:day>
+	</common:start-date>
+	<education:organization>
+		<common:name>My University</common:name>
+		<common:address>
+			<common:city>Some City</common:city>
+			<common:region>Region</common:region>
+			<common:country>US</common:country>
+		</common:address>
+		<common:disambiguated-organization>
+			<common:disambiguated-organization-identifier>XXXXXX</common:disambiguated-organization-identifier>
+			<common:disambiguation-source>RINGGOLD</common:disambiguation-source>
+		</common:disambiguated-organization>
+	</education:organization>	   	
+</education:education>
