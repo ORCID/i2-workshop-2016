@@ -241,9 +241,11 @@ https://sandbox.orcid.org/oauth/authorize?client_id=[your client ID]&response_ty
 
 <h3><a name="4.3.2"></a>4.3.2  Exchange the Authorization Code for an Access Token</h3>
 <p><img style="float: right; margin: 2px 2px 2px 2px;" src="http://alainna.org/orcid/clip_image035.png" alt="Screen shot: Google OAuth Playground, Step 2 - exchanging the authorization code for tokens - the code is pre-filled after the previous step." width="288" height="120"  />Once you have an  Authorization Code, you can exchange it for an Access Token, which allows you  to read from/write to a user&rsquo;s ORCID record. In a real-world situation, this  exchange would be done by your system, using a programming language such as  PHP, Java, or Ruby on Rails. This call is a RESTful call with information similar to the following</p>
+
 <br style="clear:both" />
 
-<p><img src="http://alainna.org/orcid/clip_image036.png" alt="Screen shot: Google OAuth Playground, Step 2 - exchanging the authorization code for tokens - after exchanging the code, the access and refresh tokens are visible." width="288" height="167" style="float: right; margin: 2px 2px 2px 2px;"  />
+<p><img src="http://alainna.org/orcid/clip_image036.png" alt="Screen shot: Google OAuth Playground, Step 2 - exchanging the authorization code for tokens - after exchanging the code, the access and refresh tokens are visible." width="288" height="167" style="float: right; margin: 2px 2px 2px 2px;"  /></p>
+
 ```
 HTTP method: GET
 Header:   Accept: application/json 
@@ -259,7 +261,8 @@ Endpoint: https://sandbox.orcid.org/oauth/token"
 <ol>
 <li>Beneath the <strong>Authorization Code</strong> field, click <strong>Exchange authorization code for tokens</strong>. <br />&nbsp; </li>
 <li>The token will appear in the <strong>Access Token </strong>field.<br  style="clear:both"  />&nbsp; </li>
-<li><img src="http://alainna.org/orcid/clip_image038.png" alt="Screen shot: the request/response section on the right side of the screen displays access token details." width="288" height="82" style="float: right; margin: 2px 2px 2px 2px;" border="0" />Note that you are provided with additional information in the <strong>Request/Response </strong>section on the right side of the screen, such as the name and ORCID iD of the user who granted permission, the lifespan of the token (20 years), and the scope for  which the token is valid.<br />&nbsp; <br />&nbsp; </li>
+<img src="http://alainna.org/orcid/clip_image038.png" alt="Screen shot: the request/response section on the right side of the screen displays access token details." width="288" height="82" style="float: right; margin: 2px 2px 2px 2px;" border="0" />
+<li>Note that you are provided with additional information in the <strong>Request/Response </strong>section on the right side of the screen, such as the name and ORCID iD of the user who granted permission, the lifespan of the token (20 years), and the scope for  which the token is valid.<br />&nbsp; <br />&nbsp; </li>
 </ol>
 <div clear="all" />
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
@@ -320,13 +323,13 @@ _PRESENTATION_
 <ul>
 <li>Client ID
 <li>Your identity provider entity ID (e.g. https://idp.example.org/idp/shibboleth)
-<li>Your Redirect URI: The page on your site that users should be directed to after they complete the cross-link process. This can be different from the redirect URI \ you use for other ORCID API applications.
+<li>Your Redirect URI: The page on your site that users should be directed to after they complete the cross-link process. This can be different from the redirect URI you use for other ORCID API applications.
 <li>The permission scope(s) that you would like. We support the following scopes:
     <ul>
-	<li>`/authenticate` to obtain the authenticated ORCID iD (public API)</li>
-	<li>`/read-limited` to read limited data on the ORCID record and obtain the authenticated ORCID iD (member API)</li>
-    <li>`/activities/update` to add/update an affiliation for your organization in the <b>employment</b> or <b>education</b> section of the ORCID record</li>
-    <li>`/person/update` to add/update a unique identifier for your organization in the <b>other IDs</b> section, or a link to the user's faculty webpage in the <b>websites</b> section of the of the ORCID record</li>
+    <li><b>/authenticate</b>: obtain the authenticated ORCID iD (public API)</li>
+    <li><b>/read-limited</b>: read limited data on the ORCID record and obtain the authenticated ORCID iD (member API)</li>
+    <li><b>/activities/update</b>: add/update an affiliation for your organization in the <b>employment</b> or <b>education</b> section of the ORCID record</li>
+    <li><b>/person/update</b>: add/update a unique identifier for your organization in the <b>other IDs</b> section, or a link to the user's faculty webpage in the <b>websites</b> section of the of the ORCID record</li>
 	</ul>
 </li>
 </ul>
@@ -343,11 +346,11 @@ _ACTIVITY_
 <p>So far, we've spent most of this tutorial focused on technical aspects of building an ORCID integration. The technical nuts and bolts are important, but the user experience is just as critical in a successful integration. </p>
 
 <p>In this section, we'll switch directions and discuss some of the key considerations in making sure that users can connect their ORCID iD to your institution quickly and easily, and that they understand the value of doing so, including:</p>
-<ol>
-<li> [Redirect pages](redirect-pages)</li>
-<li> [Local support resources](local-support-resources)</li>
-<li> [User communication](communication)</li>
-</ol>
+
+* [Redirect pages](redirect-pages)
+*  [Local support resources](local-support-resources)
+*  [User communication](communication)
+
 ##7.1 Redirect pages<a id="redirect-pages"></a>
 <p>While much of the cross-link interaction takes place on the ORCID site, there are (minimally) 2 pages or response messages that you'll need to create on your own site:</li>
 <ol>
@@ -358,66 +361,62 @@ _ACTIVITY_
 
 ###7.1.1 Redirect page - user authorized the connection
 
-<ul>
-<li>Confirmation message, customized with the user's name/ORCID iD</li>
-<li>Link/button back to user's ORCID record; use https://orcid.org/my-orcid to send the user to their personal ORCID record</li>
-<li>Contact information at your institution for help/questions about ORCID and your IdP</li>
-<li>Link to resources about how your institution uses ORCID iDs and how it has integrated with ORCID</li>
-<li>Contact for [ORCID Support](https://orcid.org/help/contact-us)</li>
-<li>Link to [information about ORCID](https://orcid.org/about)</li>
-<li>Link to the [ORCID user Knowledge Base](https://support.orcid.org)</li>
-<li>[ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)</li>
-</ul>
+* Confirmation message, customized with the user's name/ORCID iD
+* Link/button back to user's ORCID record; use https://orcid.org/my-orcid to send the user to their personal ORCID record
+* Contact information at your institution for help/questions about ORCID and your IdP
+* Link to resources about how your institution uses ORCID iDs and how it has integrated with ORCID
+* Link to contact [ORCID Support](https://orcid.org/help/contact-us)
+* Link to [information about ORCID](https://orcid.org/about)
+* Link to the [ORCID user Knowledge Base](https://support.orcid.org)
+* [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
 
 ###7.1.2 Redirect page - user denied permission
-<ul>
-<li>Message describing what happened: The user can sign into ORCID using their institutional account, but your institution doesn't know their ORCID iD and can't update their record</li>
-<li>Message listing the benefits of connecting an ORCID iD to your institution</li>
-<li>ORCID-branded button with custom OAuth link to complete the ORCID authorization</li>
-<li>Contact information at your institution for help/questions about ORCID</li>
-</li>Link to resources about how your institution uses ORCID
-</li>[ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)</li>
-</ul>
+
+* Message describing what happened: The user can sign into ORCID using their institutional account, but your institution doesn't know their ORCID iD and can't update their record
+* Message listing the benefits of connecting an ORCID iD to your institution
+* ORCID-branded button with custom OAuth link to complete the ORCID authorization
+* Contact information at your institution for help/questions about ORCID
+* Link to resources about how your institution uses ORCID
+* [ORCID branding/graphics](https://members.orcid.org/logos-web-graphics)
+
 ##7.2 Local support resources <a id="local-support-resources"></a>
 <p>ORCID's support team can help your users with general ORCID questions and issues, but for help related to your institution's ORCID integration you'll need to create some resources of your own for your users. These can include:</p>
-<ul>
-<li>Knowledge Base/help articles</li>
-<li>[LibGuides](https://members.orcid.org/resources)</li>
-<li>Tutorials</li>
-<li>Videos</li>
-</ul>
+
+* Knowledge Base/help articles
+* [LibGuides](https://members.orcid.org/resources)
+* Tutorials
+* Videos<
+
+
 <p>You should also provide users with contact information for someone at your institution who can provide assistance with ORCID-related questions.</p>
 
 ###7.2.1 Example resources
-<ul>
-<li>[HKBU iD connect tutorial video](https://www.youtube.com/watch?v=Zd5r0PflZE4&feature=youtu.be)
-<li>[University of Michigan LibGuide](http://guides.lib.umich.edu/orcid)</li>
-<li>[King Abdullah University of Science and Technology LibGuide](http://libguides.kaust.edu.sa/orcid)</li>
-<li>[More resources](https://members.orcid.org/resources#sec4)</li>
-</ul>
+
+* [HKBU iD connect tutorial video](https://www.youtube.com/watch?v=Zd5r0PflZE4&feature=youtu.be)
+* [University of Michigan LibGuide](http://guides.lib.umich.edu/orcid)
+* [King Abdullah University of Science and Technology LibGuide](http://libguides.kaust.edu.sa/orcid)
+* [More resources](https://members.orcid.org/resources#sec4)
 
 ##7.3 Communications<a id="communications"></a>
-<ul>
-<li>Plan a communication timeline: make sure that users are aware of your ORCID project and plans well before you launch!</li>
-<li>Get high-level buy-in: send communications from dean/provost-level channels if possible</li>
-<li>Promote your ORCID project at libraries, faculty/staff/TA trainings and orientations, campus events, etc.</li>
-<li>Make it an ongoing effort: ensure that new faculty/staff/TAs are in the loop</li>
-</ul>
+
+* Plan a communication timeline: make sure that users are aware of your ORCID project and plans well before you launch!
+* Get high-level buy-in: send communications from dean/provost-level channels if possible<
+* Promote your ORCID project at libraries, faculty/staff/TA trainings and orientations, campus events, etc.
+* Make it an ongoing effort: ensure that new faculty/staff/TAs are in the loop
+
 ###7.3.1 Outreach resources
-<p>We're here to help! Find logos, fliers, videos, presentation, and other downloadable templates that you use to help get the word out about ORCID at:
-[ORCID Outreach Resources](https://members.orcid.org/outreach-resources)</p>
+<p>We're here to help! Find logos, fliers, videos, presentation, and other downloadable templates that you use to help get the word out about ORCID at: <a href="https://members.orcid.org/outreach-resources">ORCID Outreach Resources</a></p>.
 
 
 ##7.4 Activity: Build your own redirect pages!
 <p>Use the samples provided to create your own custom redirect pages.</p>
 
-<ol>
-<li>Download [sample-redirect-pages.zip](sample-redirect-pages.zip) to your computer.</li>
-<li>Unzip the files.</li>
-<li>Open redirect-success.html and redirect-deny.html in a browser to view their current content.</li>
-<li>Using a text editor, edit redirect-success.html and redirect-deny.html to customize the messages, links, graphics, etc. Make sure to keep the files inside the sample-redirect-pages folder, so that the style sheets remain linked!</li>
-<li>Save your changes and refresh the pages in your browser to see the results.</li>
-</ol>
+1. Download [sample-redirect-pages.zip](sample-redirect-pages.zip) to your computer.
+2. Unzip the files.
+3. Open redirect-success.html and redirect-deny.html in a browser to view their current content.
+4. Using a text editor, edit redirect-success.html and redirect-deny.html to customize the messages, links, graphics, etc. Make sure to keep the files inside the sample-redirect-pages folder, so that the style sheets remain linked!
+5. Save your changes and refresh the pages in your browser to see the results.
+
 <p align="right" style="font-size:9px"><a href="#top">-top-</a></p>
 
 [//]: # (---------POST AN AFFILIATION TO YOUR INSTITUTION---------)
@@ -490,5 +489,5 @@ Tip: The amended area are lines 1 (edit) and lines 13-11 (new data). You can cop
 <li>Find sample calls and XML in the <a href="https://github.com/ORCID/ORCID-Source/tree/master/orcid-model/src/main/resources/record_2.0" target="_blank">ORCID Github repository</a><br />&nbsp;</li>
 <li>Join the  <a href="https://groups.google.com/group/orcid-api-users" target="_parent">ORCID API Users Group</a><br />&nbsp;</li>
 <li>Sign up for a  <a href="https://members.orcid.org/event-list">Technical Webinar</a><br />&nbsp;</li>
-<li><a href="https://orcid.org/help/contact-us>Contact us for help</a></li>
+<li><a href="https://orcid.org/help/contact-us">Contact us for help</a></li>
 </ul>
